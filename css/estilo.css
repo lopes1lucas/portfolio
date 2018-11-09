@@ -1,3 +1,5 @@
+/* Formatação geral */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -5,6 +7,14 @@ body {
 	color: #000;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
+}
+
+.caractere-azul {
+	color: #30BCED;
+}
+
+.caractere-vermelho {
+	color: #EC1040;
 }
 
 .bgPreto {
@@ -15,24 +25,101 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.button {
+	background-color: #30BCED;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    color:#fff;
+    font-weight: bold;
+    width: 18%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    display: flex;
+	justify-content: center;
+  	align-items: center;
+    margin-top: 30px;
+}
+
+.button:hover {
+	background-color: #29A0C9;
+	transition: 2ms ease-in;
+}
+
+.button1 {
+	background-color: #30BCED;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color:#fff;
+    font-weight: bold;
+	width: 100px;
+	height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+.button1:hover {
+	background-color: #29A0C9;
+	transition: 2ms ease-in;
+}
+
+.titulo {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+	color: #30BCED;
+	align-self: flex-start;
+}
+
+.titulo1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 21px;
+	color: #000;
+}
+
+.titulo2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+}
+
+.icone {
+	height: 30px;
+	width: 30px;
+}
+
+/* Menu de navegação */
+
 #logo {
 	margin: 0;
 	font-weight: 900;
 	font-size: 36px;
 	color: #000;
 	letter-spacing: -1px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #menu {
 	display: flex;
+	position: relative;
 	/*flex-flow: wrap;*/
 	align-items: center;
 	justify-content: space-evenly;
 	background-color: #fff;
 	width: 100%;
 	/*box-shadow: 0px 1px 3px lightgrey;*/
-	font-family: 'Source Sans Pro', sans-serif;
-	border-bottom: 1px solid black;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	/*border-bottom: 1px solid black;*/
+	z-index: 1;
 }
 
 #conteudoMenu {
@@ -55,6 +142,30 @@ body {
 	text-decoration: none;
 	display: flex;
 	align-items: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.animacao-links {
+	display: inline-block;
+	position: relative;
+}
+
+.animacao-links::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background-color: #30BCED;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.animacao-links:hover::before {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 #social ul {
@@ -84,6 +195,8 @@ body {
 	display: inline-block;
 }
 
+/* Página inicial */
+
 #home {
 	display: flex;
 	justify-content: center;
@@ -109,40 +222,7 @@ body {
 	margin-top: -15px;
 }
 
-.button {
-	background-color: #30BCED;
-	border: none;
-	font-family: 'Open Sans', sans-serif;
-    font-size: 21px;
-    color:#fff;
-    font-weight: bold;
-    width: 18%;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 25px;
-    display: flex;
-	justify-content: center;
-  	align-items: center;
-    margin-top: 30px;
-}
-
-.button1 {
-	background-color: #30BCED;
-	border: none;
-	font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color:#fff;
-    font-weight: bold;
-	width: 100px;
-	height: 40px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 15px;
-	display: flex;
-	justify-content: center;
-  	align-items: center;
-}
+/* Página sobre */
 
 #sobre {
 	display: flex;
@@ -153,7 +233,7 @@ body {
 }
 
 #sobreContainer {
-
+	margin-top: 1%;
 }
 
 #conteudoSobre {
@@ -170,7 +250,8 @@ body {
 }
 
 #skillsContainer {
-	
+	margin: 0;
+	padding: 0;
 }
 
 #conteudoSkills {
@@ -181,6 +262,12 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
+
+.skillsBox {
+	margin-top: -3%;
+}
+
+/* Página portfólio */
 
 #portfolio {
 	margin: 0;
@@ -198,6 +285,7 @@ body {
 	align-items: center;
 	width: 848px;
 	height: 600px;
+	margin-top: -0.5%;
 }
 
 #conteudoPortfolio {
@@ -222,6 +310,8 @@ body {
 	height: 80px;
 }
 
+/* Página contato */
+
 #contato {
 	margin: 0;
 	padding: 0;
@@ -236,15 +326,15 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-top: 1%;
 }
 
 #conteudoContato {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-flow: wrap;
+	/*flex-flow: wrap;*/
 	flex-direction: column;
-	margin-top: 2%;
 	color: #fff;
 	width: 700px;
 	height: 450px;
@@ -259,6 +349,8 @@ form {
 	height: 30px;
 	margin-top: 5px;
 	margin-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 
 #caixaTxtMsg {
@@ -267,37 +359,11 @@ form {
 	margin-top: 5px;
 	margin-bottom: 20px;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
+	resize: none;
 }
 
 .formLabel {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
-}
-
-.titulo {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: bold;
-	font-size: 36px;
-	color: #30BCED;
-	align-self: flex-start;
-}
-
-.titulo1 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: bold;
-	font-size: 21px;
-	color: #000;
-}
-
-.titulo2 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: bold;
-	font-size: 18px;
-	color: #000;
-}
-
-.icone {
-	height: 30px;
-	width: 30px;
 }
