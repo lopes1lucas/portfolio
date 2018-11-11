@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="Lucas Lopes, Design, Design Digital, Design Gráfico, Portfólio, Graphic Design, Digital Design">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/javascript" src="js/lightbox.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 	<title>Portfólio | Lucas Lopes</title>
@@ -47,14 +48,14 @@
 			<h2 class="titulo">Portfólio</h2>
 				<div id="conteudoPortfolio">
 					<div class="trabalhos">
-						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, cartaz do jogo Salve Cocó" src="imagem/salvecoco.png">
+						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, cartaz do jogo Salve Cocó" onclick="show('poster-salvecoco')" id="poster-salvecoco" src="imagem/poster-salvecoco.png">
 						<h3 class="titulo1">Salve Cocó</h3>
 						<p class="textoPortfolio">Illustração e design de interface do jogo Salve Cocó. Projeto desenvolvido no primeiro semestre do curso de Sistemas e Midias Digitais da UFC.</p>
 						<a href="" target="_self" class="button1">Mais sobre</a>
 					</div>
 
 					<div class="trabalhos">
-						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, panfleto e banner" src="imagem/banner.png">
+						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, panfleto e banner" onclick="show('banner-claro')" id="banner-claro" src="imagem/banner-claro.jpg">
 						<h3 class="titulo1">Panfleto e Banner</h3>
 						<p class="textoPortfolio">Manipulação de imagem.
 						Panfletos produzidos para a disciplina de Autoração Multimidia I.</p>
@@ -62,12 +63,17 @@
 					</div>
 
 					<div class="trabalhos">
-						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, cartaz do sequenciador musical Notitas" src="imagem/notitas.png">
+						<img class="imgPortfolio" alt="Miniatura de imagem, portfólio, cartaz do sequenciador musical Notitas" onclick="show('poster-notitas')" id="poster-notitas" src="imagem/poster-notitas.png">
 						<h3 class="titulo1">Notitas</h3>
 						<p class="textoPortfolio">Design gráfico e Interface.
 						Sequenciador musical para crianças.</p>
 						<a href="" target="_self" class="button1">Mais sobre</a>
 					</div>
+			</div>
+			<div id="overlay">
+				<div id="lightbox">
+					<span class="fechar" onclick="fecharBox()">&times;</span>
+				</div>
 			</div>
 		</section>
 	</div>

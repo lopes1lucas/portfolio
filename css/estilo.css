@@ -309,12 +309,85 @@ body {
 .imgPortfolio {
 	width: 255px;
 	height: 255px;
+	object-fit: cover;
+}
+
+.imgPortfolio:hover {
+	opacity:0.8;
 }
 
 .textoPortfolio {
 	width: 255px;
 	height: 80px;
 	margin-top: -4%;
+}
+
+/* Lightbox */
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	background-color: rgba(0,0,0,0.9);
+}
+
+#lightbox {
+	display: flex;
+	animation: aparecer 1s;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	width: auto;
+	height: auto;
+	padding: 5px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+@keyframes aparecer {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#lightbox img {
+	max-width: 80vw;
+	max-height: 80vh;
+}
+
+.fechar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	font-size: 30px;
+	margin: auto;
+	width: 35px;
+	height: 35px;
+	/*text-align: center;*/
+	font-weight: bold;
+	color: #000;
+	background: #fff;
+	border-radius: 50%;
+	left: 96%;
+	top: -4%;
+	transition: 0.3s;
+}
+
+.fechar:hover {
+	color: #fff;
+	background: #000;
 }
 
 /* Página contato */
